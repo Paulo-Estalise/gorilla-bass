@@ -78,3 +78,33 @@ function ataqueDosHumanos(){
   gorilaLife = Math.max(0, gorilaLife); 
   logar(`Humanos causaram ${dano}% de dano no gorila!`);
 }  
+function checarFimDeJogo() {
+  if (gorilaLife <= 0) {
+    logar("💀 O gorila foi derrotado pelos humanos!"); 
+    desabilitarBotoes(); 
+  } else if (humanosRestantes <= 0) {
+    logar("🦍 O gorila venceu todos os 100 humanos!"); 
+    desabilitarBotoes(); 
+}
+
+function desabilitarBotoes() {
+  btnAtacar.disabled = true;
+  btnDefender.disabled = true;
+  btnCurar.disabled = true;
+}
+
+
+function habilitarBotoes() {
+  btnAtacar.disabled = false;
+  btnDefender.disabled = false;
+  btnCurar.disabled = false;
+}
+function reiniciarJogo() {
+  gorilaLife = 100; 
+  humanosRestantes = 100; 
+  isDefending = false; 
+  battleLog.innerHTML = ""; 
+  criarHumanos(); 
+  atualizarInterface(); 
+  habilitarBotoes(); 
+}
