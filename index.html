@@ -10,37 +10,45 @@
   <div class="container">
     <audio id="som-ataque" src="assets/som-ataque.mp3"></audio>
 
-    <h1>
-      <img src="./assets/IconeMacaco.png" class="gorila-icon-title" alt="Ícone Gorila" />
-      Gorila vs 100 Humanos
-      <img src="./assets/IconeLutador.png" class="human-icon-title" alt="Ícone Humano" />
-    </h1>
+    <header>
+      <h1>
+        <img src="./assets/IconeMacaco.png" class="gorila-icon-title" alt="Ícone Gorila" />
+        Gorila vs 100 Humanos
+        <img src="./assets/IconeLutador.png" class="human-icon-title" alt="Ícone Humano" />
+      </h1>
+    </header>
 
-    <div class="game-panel">
-      <div class="stats">
-        <div class="health-bar">
-          <div id="gorila-health" class="health"></div>
+    <main>
+      <section class="game-panel">
+        <div class="stats">
+          <div class="health-bar">
+            <div id="gorila-health" class="health"></div>
+          </div>
+          <p>Vida: <span id="gorila-life">100</span>%</p>
+          <p>Humanos: <span id="humanos-count">100</span></p>
         </div>
-        <p>Vida: <span id="gorila-life">100</span>%</p>
-        <p>Humanos: <span id="humanos-count">100</span></p>
-      </div>
 
-      <div class="controls">
-        <button id="attack-btn">ATACAR</button>
-        <button id="defend-btn">DEFENDER</button>
-        <button id="heal-btn">CURAR</button>
-        <button id="reset-btn">REINICIAR</button>
-      </div>
-    </div>
+        <div class="controls">
+          <button id="attack-btn">ATACAR (A)</button>
+          <button id="defend-btn">DEFENDER (D)</button>
+          <button id="heal-btn">CURAR (C)</button>
+          <button id="reset-btn">REINICIAR</button>
+        </div>
+      </section>
 
-    <div class="battle-area">
-      <div id="gorila" class="gorila">
-        <img src="./assets/IconeMacaco.png" alt="Gorila" width="80" />
-      </div>
-      <div id="humanos" class="humanos"></div>
-    </div>
+      <section class="battle-area">
+        <div id="gorila" class="gorila">
+          <img src="./assets/IconeMacaco.png" alt="Gorila" width="80" />
+        </div>
+        <div id="humanos" class="humanos"></div>
+      </section>
 
-    <div id="battle-log" class="battle-log"></div>
+      <section id="battle-log" class="battle-log"></section>
+    </main>
+
+    <footer>
+      <p> &copy; 2025 - Gorila vs 100 Humanos</p>
+    </footer>
   </div>
 
   <script src="script.js"></script>
