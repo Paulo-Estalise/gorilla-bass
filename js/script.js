@@ -85,6 +85,7 @@ function checarFimDeJogo() {
   } else if (humanosRestantes <= 0) {
     logar("🦍 O gorila venceu todos os 100 humanos!"); 
     desabilitarBotoes(); 
+  }  
 }
 
 function desabilitarBotoes() {
@@ -108,3 +109,16 @@ function reiniciarJogo() {
   atualizarInterface(); 
   habilitarBotoes(); 
 }
+btnAtacar.addEventListener("click", ataqueGorila);
+btnDefender.addEventListener("click", defesaGorila);
+btnCurar.addEventListener("click", curarGorila);
+btnReset.addEventListener("click", reiniciarJogo);
+
+document.addEventListener("keydown", (e)=>{
+  if (btnAtacar.disabled) return;
+  
+  if (e.key.toLowerCase() === "a") ataqueGorila();
+  else if (e.key.toLowerCase() === "d") defesaGorila();
+  else if (e.key.toLowerCase() === "c") curarGorila ();
+});
+reiniciarJogo();
