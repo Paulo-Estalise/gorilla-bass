@@ -50,11 +50,18 @@ function ataqueGorila() {
   checarFimDeJogo(); 
   atualizarInterface(); 
 }
-function defesaGorila();
-  isDefending = true; // Set defense flag
-  logar("Gorila está se defendendo no próximo ataque!"); // Log the action
-  ataqueDosHumanos(); // Humans attack (damage will be reduced)
-  checarFimDeJogo(); // Check if the game ended
-  atualizarInterface(); // Update interface
+function defesaGorila(); {
+  isDefending = true;
+  logar("Gorila está se defendendo no próximo ataque!");
+  ataqueDosHumanos();
+  checarFimDeJogo(); 
+  atualizarInterface(); 
 }
-  
+function curarGorila() {
+  const cura = Math.floor(Math.random() * 10) + 5;
+  gorilaLife = Math.min(100, gorilaLife + cura); 
+  logar(`Gorila se curou em ${cura}%`); 
+  ataqueDosHumanos(); 
+  checarFimDeJogo(); 
+  atualizarInterface();   
+}  
