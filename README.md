@@ -50,7 +50,7 @@ As ações também podem ser acionadas pelas teclas A, D e C do teclado.
 
 ## 📷 Preview
 
-![screenshot](./assets/screenshot.png) <!-- Adicione essa imagem se quiser mostrar uma prévia do jogo -->
+
 
 ---
 
@@ -58,6 +58,6 @@ As ações também podem ser acionadas pelas teclas A, D e C do teclado.
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seuusuario/gorila-vs-100-humanos.git
+   git clone https://github.com/Paulo-Estalise/gorilla-bass.git
 🧑‍💻 Autor
 Desenvolvido por [Paulo-Estalise, Emanuel-italo e Alef Rodrigues]
