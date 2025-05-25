@@ -25,3 +25,10 @@ function criarHumanos() {
     humanosContainer.appendChild(img);
   }
 }
+
+function atualizarInterface()
+{
+    gorilaLifeEl.textContent = gorilaLife;
+    humanosCountEl.textContent = humanosRestantes;
+    gorilaHealthBar.style.width = '${gorilaLife}%';
+}
