@@ -32,3 +32,9 @@ function atualizarInterface()
     humanosCountEl.textContent = humanosRestantes;
     gorilaHealthBar.style.width = '${gorilaLife}%';
 }
+
+function logar(msg){
+  const p = document.createElement("p");
+  p.textContent = msg;
+  battleLog.prepend(p);
+}
