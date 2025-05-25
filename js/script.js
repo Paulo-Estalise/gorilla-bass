@@ -38,3 +38,16 @@ function logar(msg){
   p.textContent = msg;
   battleLog.prepend(p);
 }
+function ataqueGorila() {
+  if (humanosRestantes <= 0) return;
+  somAtaque.play();
+  const eliminados = Math.min(10,humanosRestantes);
+  humanosRestantes -= eliminados;
+  
+  logar('Gorila eliminou ${eliminados} humanos!');
+  criarHumanos(); 
+  ataqueDosHumanos(); 
+  checarFimDeJogo(); 
+  atualizarInterface(); 
+}
+function
