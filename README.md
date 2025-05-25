@@ -49,7 +49,7 @@ As ações também podem ser acionadas pelas teclas A, D e C do teclado.
 ---
 
 ## 📷 Preview
-
+Visualize no gitHub pages https://paulo-estalise.github.io/gorilla-bass/
 
 
 ---
