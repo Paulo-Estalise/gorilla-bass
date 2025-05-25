@@ -50,4 +50,11 @@ function ataqueGorila() {
   checarFimDeJogo(); 
   atualizarInterface(); 
 }
-function
+function defesaGorila();
+  isDefending = true; // Set defense flag
+  logar("Gorila está se defendendo no próximo ataque!"); // Log the action
+  ataqueDosHumanos(); // Humans attack (damage will be reduced)
+  checarFimDeJogo(); // Check if the game ended
+  atualizarInterface(); // Update interface
+}
+  
