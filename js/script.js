@@ -65,3 +65,16 @@ function curarGorila() {
   checarFimDeJogo(); 
   atualizarInterface();   
 }  
+function ataqueDosHumanos(){
+  if (humanosRestantes <= 0) return; 
+
+  let dano = Math.floor(Math.random() * 10) + 5; 
+  if (isDefending) {
+    dano = Math.floor(dano / 2); 
+    isDefending = false; 
+  }
+
+  gorilaLife -= dano; 
+  gorilaLife = Math.max(0, gorilaLife); 
+  logar(`Humanos causaram ${dano}% de dano no gorila!`);
+}  
