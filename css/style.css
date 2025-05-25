@@ -60,3 +60,32 @@ h1 {
   background: #4CAF50;
   transition: width 0.3s;
 }
+
+.controls {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+ 
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: orange;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+ 
+button:hover {
+  background: blue;
+}
+ 
+#reset-btn {
+  background: #f44336;
+}
+ 
+#reset-btn:hover {
+  background: #d32f2f;
+}
