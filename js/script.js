@@ -14,3 +14,14 @@ let humanosRestantes = 100; // Number of remaining humans
 let isDefending = false; // Flag to check if gorilla is defending
 
 const humanosContainer = document.getElementById("humanos"); // Container for human images
+
+function criarHumanos() {
+  humanosContainer.innerHTML = ""; // Clear existing humans
+  for (let i = 0; i < humanosRestantes; i++) {
+    const img = document.createElement("img");
+    img.src = "./assets/IconeLutador.png"; // Path to human icon
+    img.alt = "Humano"; // Alt text for accessibility
+    img.className = "humano"; // CSS class for styling
+    humanosContainer.appendChild(img);
+  }
+}
