@@ -59,5 +59,5 @@ Visualize no gitHub pages https://paulo-estalise.github.io/gorilla-bass/
 1. Clone o repositório:
    ```bash
    git clone https://github.com/Paulo-Estalise/gorilla-bass.git
-🧑‍💻 Autor
+🧑‍💻 
 Desenvolvido por [Paulo-Estalise, Emanuel-italo e Alef Rodrigues]
