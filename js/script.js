@@ -50,6 +50,7 @@ function ataqueGorila() {
   ataqueDosHumanos();
   checarFimDeJogo();
   atualizarInterface();
+  salvarEstado();
 }
 
 function defesaGorila() {
@@ -58,6 +59,7 @@ function defesaGorila() {
   ataqueDosHumanos();
   checarFimDeJogo();
   atualizarInterface();
+  salvarEstado();
 }
 
 function curarGorila() {
@@ -67,6 +69,7 @@ function curarGorila() {
   ataqueDosHumanos();
   checarFimDeJogo();
   atualizarInterface();
+  salvarEstado();
 }
 
 function ataqueDosHumanos() {
@@ -113,6 +116,22 @@ function reiniciarJogo() {
   criarHumanos();
   atualizarInterface();
   habilitarBotoes();
+  salvarEstado();
+}
+
+function salvarEstado() {
+  localStorage.setItem("gorilaLife", gorilaLife);
+  localStorage.setItem("humanosRestantes", humanosRestantes);
+}
+
+function carregarEstado() {
+  const vida = localStorage.getItem("gorilaLife");
+  const humanos = localStorage.getItem("humanosRestantes");
+
+  if (vida !== null && humanos !== null) {
+    gorilaLife = parseInt(vida);
+    humanosRestantes = parseInt(humanos);
+  }
 }
 
 btnAtacar.addEventListener("click", ataqueGorila);
@@ -120,7 +139,7 @@ btnDefender.addEventListener("click", defesaGorila);
 btnCurar.addEventListener("click", curarGorila);
 btnReset.addEventListener("click", reiniciarJogo);
 
-// Suporte a teclas A, D, C
+
 document.addEventListener("keydown", (e) => {
   if (btnAtacar.disabled) return;
 
@@ -130,4 +149,8 @@ document.addEventListener("keydown", (e) => {
 });
 
 
+window.addEventListener("beforeunload", salvarEstado);
+
+
+carregarEstado();
 reiniciarJogo();
