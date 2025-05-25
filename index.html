@@ -1,46 +1,48 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gorila vs 100 Humanos</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="./js/script.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gorila vs 100 Humanos</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="container">
-        <h1>🦍 Gorila vs 100 Humanos 🧑‍🤝‍🧑</h1>
-        
-        <div class="status">
-            <div class="gorila-status">
-                <h2>Gorila</h2>
-                <div class="health-bar">
-                    <div id="gorila-vida" class="health-fill">100%</div>
-                </div>
-                <p>Energia: <span id="gorila-energia">100</span></p>
-            </div>
-            
-            <div class="humanos-status">
-                <h2>Humanos Restantes: <span id="humanos-restantes">100</span></h2>
-                <div class="humanos-container" id="humanos-container">
-                    
-                </div>
-            </div>
+  <div class="container">
+    <audio id="som-ataque" src="assets/som-ataque.mp3"></audio>
+
+    <h1>
+      <img src="./assets/IconeMacaco.png" class="gorila-icon-title" alt="Ícone Gorila" />
+      Gorila vs 100 Humanos
+      <img src="./assets/IconeLutador.png" class="human-icon-title" alt="Ícone Humano" />
+    </h1>
+
+    <div class="game-panel">
+      <div class="stats">
+        <div class="health-bar">
+          <div id="gorila-health" class="health"></div>
         </div>
-        
-        <div class="controls">
-            <button id="btn-atacar" class="btn atacar">Atacar 🦍</button>
-            <button id="btn-defender" class="btn defender">Defender 🛡️</button>
-            <button id="btn-curar" class="btn curar">Curar ❤️</button>
-            <button id="btn-reiniciar" class="btn reiniciar">Reiniciar 🔄</button>
-        </div>
-        
-        <div class="log" id="log">
-            <h3>Registro de Batalha:</h3>
-            <div id="log-mensagens"></div>
-        </div>
+        <p>Vida: <span id="gorila-life">100</span>%</p>
+        <p>Humanos: <span id="humanos-count">100</span></p>
+      </div>
+
+      <div class="controls">
+        <button id="attack-btn">ATACAR</button>
+        <button id="defend-btn">DEFENDER</button>
+        <button id="heal-btn">CURAR</button>
+        <button id="reset-btn">REINICIAR</button>
+      </div>
     </div>
 
-    
+    <div class="battle-area">
+      <div id="gorila" class="gorila">
+        <img src="./assets/IconeMacaco.png" alt="Gorila" width="80" />
+      </div>
+      <div id="humanos" class="humanos"></div>
+    </div>
+
+    <div id="battle-log" class="battle-log"></div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
